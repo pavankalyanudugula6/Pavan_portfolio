@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pavan Kalyan – Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans Pro',sans-serif;font-size:16px;line-height:1.65;color:#333;background:#fff}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid #e8e8e8;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-brand{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.1rem;color:#333;letter-spacing:0.05em;text-decoration:none}
+.nav-menu{display:flex;gap:0;list-style:none}
+.nav-menu a{display:block;padding:0.5rem 1.1rem;font-family:'Raleway',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#666;text-decoration:none;transition:color 0.2s}
+.nav-menu a:hover{color:#e44c65}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:#333;transition:all 0.3s}
+
+/* SECTIONS COMMON */
+section{padding:6rem 0}
+.inner{max-width:900px;margin:0 auto;padding:0 2.5rem}
+h1.major{font-family:'Raleway',sans-serif;font-size:2.6rem;font-weight:800;color:#333;margin-bottom:1.5rem;line-height:1.2}
+h2.major{font-family:'Raleway',sans-serif;font-size:2rem;font-weight:700;color:#333;margin-bottom:1rem;border-bottom:3px solid #e44c65;padding-bottom:0.5rem;display:inline-block}
+h3{font-family:'Raleway',sans-serif;font-weight:700;font-size:1.15rem;color:#333;margin-bottom:0.3rem}
+h4{font-family:'Source Sans Pro',sans-serif;font-weight:600;font-size:0.95rem;color:#e44c65;margin-bottom:0.4rem;letter-spacing:0.02em}
+p{margin-bottom:1rem;color:#555}
+
+/* ABOUT */
+#aboutme{background:#f8f8f8;padding-top:7rem}
+.about-flex{display:flex;gap:3.5rem;align-items:flex-start;margin-top:2rem}
+.about-left{flex:0 0 260px;text-align:center}
+.profile-pic{width:180px;height:180px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;display:block;background:linear-gradient(135deg,#e44c65 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:3.5rem;font-weight:800;color:#fff}
+.profile-pic-wrap{width:180px;height:180px;border-radius:50%;margin:0 auto 1.2rem;background:linear-gradient(135deg,#e44c65,#764ba2);display:flex;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:3.5rem;font-weight:800;color:#fff;border:4px solid #fff;box-shadow:0 4px 20px rgba(0,0,0,0.12)}
+.about-intro{font-size:1rem;color:#555;text-align:left;flex:1}
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem}
+
+/* PROFILE LIST */
+.profile-list{list-style:none}
+.profile-list li{display:flex;gap:0.6rem;margin-bottom:0.7rem;font-size:0.92rem;border-bottom:1px dotted #e0e0e0;padding-bottom:0.7rem}
+.profile-list li:last-child{border-bottom:none}
+.profile-list strong{color:#333;min-width:72px;flex-shrink:0;font-weight:600}
+.profile-list span{color:#555;word-break:break-word}
+.profile-list a{color:#e44c65;text-decoration:none}
+.profile-list a:hover{text-decoration:underline}
+
+/* SKILLS */
+.skills-section{margin-top:2rem}
+.skill-cat{font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;color:#333;margin:1.2rem 0 0.6rem;padding-left:0}
+.skill-bar-item{margin-bottom:0.7rem}
+.skill-bar-header{display:flex;justify-content:space-between;font-size:0.85rem;margin-bottom:0.3rem;font-weight:600;color:#444}
+.skill-bar-bg{background:#e8e8e8;border-radius:20px;height:8px;overflow:hidden}
+.skill-bar-fill{height:100%;background:linear-gradient(90deg,#e44c65,#764ba2);border-radius:20px;width:0;transition:width 1.2s ease}
+.skill-tags{font-size:0.88rem;color:#555;line-height:1.8}
+
+/* RESUME SECTION */
+#resume{background:#fff}
+.resume-block{margin-bottom:3.5rem}
+.resume-block h2.major{margin-bottom:1.5rem}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:1.8rem}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#f0f0f0}
+.tl-item{position:relative;margin-bottom:2.2rem;padding-bottom:2.2rem;border-bottom:1px solid #f2f2f2}
+.tl-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.tl-item::before{content:'';position:absolute;left:-2.12rem;top:0.4rem;width:10px;height:10px;border-radius:50%;background:#e44c65;border:2px solid #fff;box-shadow:0 0 0 2px #e44c65}
+.tl-date{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:600;color:#999;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem}
+.tl-title{font-family:'Raleway',sans-serif;font-size:1.1rem;font-weight:700;color:#333;margin-bottom:0.1rem}
+.tl-sub{font-size:0.9rem;color:#e44c65;font-weight:600;margin-bottom:0.5rem}
+.tl-body{font-size:0.9rem;color:#666;line-height:1.7}
+.tl-body ul{padding-left:1.2rem;margin-top:0.4rem}
+.tl-body ul li{margin-bottom:0.3rem}
+.tl-body strong{color:#555;font-weight:600}
+.proj-tag{display:inline-block;font-size:0.72rem;font-family:'Raleway',sans-serif;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#764ba2;border:1px solid #ddd6f3;border-radius:3px;padding:0.15rem 0.5rem;margin-bottom:0.5rem}
+
+/* CONTACT */
+#contact{background:#2d2d2d;color:#ccc;padding:4rem 0}
+#contact h2{font-family:'Raleway',sans-serif;font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:2rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
+.contact-block h3{font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#e44c65;margin-bottom:0.8rem}
+.contact-block p,.contact-block a{font-size:0.95rem;color:#bbb;line-height:1.8;text-decoration:none}
+.contact-block a:hover{color:#e44c65}
+footer-bar{display:block;text-align:center;padding-top:2rem;margin-top:2rem;border-top:1px solid #444;font-size:0.8rem;color:#777}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-menu{display:none;position:absolute;top:58px;left:0;right:0;background:#fff;flex-direction:column;border-bottom:1px solid #eee;padding:0.5rem 0}
+  .nav-menu.open{display:flex}
+  .nav-menu a{padding:0.8rem 2rem}
+  .hamburger{display:flex}
+  .about-flex{flex-direction:column}
+  .about-left{flex:none;width:100%}
+  .about-cols{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  section{padding:4rem 0}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-brand" href="#">Pavan Kalyan</a>
+  <div class="hamburger" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="#aboutme">About Me</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#projects">Technical Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT ME -->
+<section id="aboutme">
+  <div class="inner">
+    <p style="font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#e44c65;margin-bottom:0.5rem">About Me</p>
+    <h1 class="major">Let me introduce myself.</h1>
+
+    <div class="about-flex">
+      <div class="about-left">
+        <div class="profile-pic-wrap">PK</div>
+        <p style="font-size:0.85rem;color:#888;font-style:italic">St. Louis, Missouri, USA</p>
+      </div>
+      <div class="about-intro">
+        <p>I am a Software Engineer with <strong>5+ years of experience</strong> building large-scale distributed systems, GenAI pipelines, and cloud-native applications across financial services and enterprise domains. Passionate about the intersection of backend engineering, AI/ML, and production-grade reliability.</p>
+
+        <div class="about-cols">
+          <div>
+            <h3>Profile</h3>
+            <ul class="profile-list">
+              <li><strong>Name:</strong><span>Pavan Kalyan</span></li>
+              <li><strong>Email:</strong><span><a href="mailto:pavankalyanudugula@gmail.com">pavankalyanudugula@gmail.com</a></span></li>
+              <li><strong>Phone:</strong><span>+1 (314) 282-3092</span></li>
+              <li><strong>Location:</strong><span>St. Louis, Missouri, USA</span></li>
+              <li><strong>LinkedIn:</strong><span><a href="https://linkedin.com/in/pavankalyanudugula" target="_blank">linkedin.com/in/pavankalyanudugula</a></span></li>
+              <li><strong>Status:</strong><span style="color:#27ae60;font-weight:600">Open to opportunities</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="skills-section">
+              <h3>Skills</h3>
+              <p class="skill-cat">Languages</p>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Java / Spring Boot</span><span>95%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="95"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Python / FastAPI</span><span>90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="90"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>TypeScript / React</span><span>85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Go / C++</span><span>70%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="70"></div></div>
+              </div>
+
+              <p class="skill-cat">AI / ML</p>
+              <p class="skill-tags">LangChain, LlamaIndex, OpenAI API, Anthropic API, RAG Pipelines, Hugging Face, RAGAS, DeepEvals, Vector Databases</p>
+
+              <p class="skill-cat">Cloud &amp; DevOps</p>
+              <p class="skill-tags">AWS (EC2, EKS, Lambda, S3, RDS), Docker, Kubernetes, Terraform, GitHub Actions, Jenkins, Apache Kafka</p>
+
+              <p class="skill-cat">Databases</p>
+              <p class="skill-tags">PostgreSQL, MySQL, MongoDB, DynamoDB, Redis, Elasticsearch</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="inner">
+    <p style="font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#e44c65;margin-bottom:0.5rem">Resume</p>
+
+    <!-- EDUCATION -->
+    <div class="resume-block">
+      <h2 class="major">Education</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Graduation 2024</div>
+          <div class="tl-title">Master of Science in Computer and Information Systems</div>
+          <h4>Saint Louis University — St. Louis, Missouri</h4>
+          <div class="tl-body">Focused on distributed systems, software architecture, and AI/ML engineering.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Aug 2017 – May 2021</div>
+          <div class="tl-title">Bachelor of Engineering in Electronics and Communication</div>
+          <h4>JNTUH — Hyderabad, India</h4>
+          <div class="tl-body">Core curriculum in electronics, communication systems, and computer science fundamentals.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="resume-block">
+      <h2 class="major">Certifications</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2025</div>
+          <div class="tl-title">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</div>
+          <h4>Oracle</h4>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025</div>
+          <div class="tl-title">Oracle Cloud Infrastructure 2025 Certified DevOps Professional</div>
+          <h4>Oracle</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="resume-block" id="projects">
+      <h2 class="major">Technical Projects</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="proj-tag">GenAI / RAG</div>
+          <div class="tl-title">RAG Evaluation Framework</div>
+          <h4>USAA — Production</h4>
+          <div class="tl-body">Built an end-to-end RAG evaluation pipeline using RAGAS and DeepEvals to benchmark LLM output quality across 15+ evaluation metrics. Integrated LangChain, OpenAI API, and Anthropic API with automated scoring dashboards. Reduced manual QA effort by 60%.</div>
+        </div>
+        <div class="tl-item">
+          <div class="proj-tag">Distributed Systems</div>
+          <div class="tl-title">Real-Time Fraud Detection System</div>
+          <h4>USAA — Production</h4>
+          <div class="tl-body">Designed and deployed a Kafka-based real-time event streaming pipeline for fraud signal detection. Integrated ML scoring models with sub-50ms latency SLAs. Achieved 28% improvement in fraud detection accuracy while reducing false positives by 15%.</div>
+        </div>
+        <div class="tl-item">
+          <div class="proj-tag">Microservices / AWS</div>
+          <div class="tl-title">Cloud-Native Payment Processing Platform</div>
+          <h4>USAA — Production</h4>
+          <div class="tl-body">Architected a multi-service payment processing system on AWS EKS with Spring Boot microservices. Implemented OAuth2, JWT, and RBAC security layers compliant with PCI DSS. Handles 30,000+ concurrent users at 99.99% uptime with 35% reduction in API latency.</div>
+        </div>
+        <div class="tl-item">
+          <div class="proj-tag">CI/CD / Infrastructure</div>
+          <div class="tl-title">Zero-Downtime Deployment Pipeline</div>
+          <h4>Capgemini — Production</h4>
+          <div class="tl-body">Built automated CI/CD pipelines using GitHub Actions, Terraform, and Ansible. Implemented blue-green deployment strategy with automated rollback. Reduced deployment times by 50% and increased release frequency by 3x across 8 production services.</div>
+        </div>
+        <div class="tl-item">
+          <div class="proj-tag">Healthcare / ML</div>
+          <div class="tl-title">Automated Claims Validation System</div>
+          <h4>Accenture — Production</h4>
+          <div class="tl-body">Developed ML-assisted claim routing and automated validation engine using Python and Spring Boot. Improved insurance claim first-pass rate from 78% to 96%. Integrated real-time scheduling notifications reducing patient no-shows by 22%.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:#f8f8f8">
+  <div class="inner">
+    <p style="font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#e44c65;margin-bottom:0.5rem">Career</p>
+    <h2 class="major" style="margin-bottom:2rem">Work Experience</h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-date">May 2024 – Present</div>
+        <div class="tl-title">Software Engineer</div>
+        <h4>USAA — United States (Remote)</h4>
+        <div class="tl-body">
+          <p><strong>Distributed Systems &amp; APIs</strong> — Architected Java / Spring Boot microservices serving 30,000+ concurrent users at 99.99% uptime on AWS EKS. Reduced API response times by 35% through async processing and Redis caching.</p>
+          <p><strong>GenAI &amp; LLM Integration</strong> — Built RAG pipelines and LLM evaluation frameworks using LangChain, OpenAI API, Anthropic API, RAGAS, and DeepEvals. Deployed production AI workflows with measurable quality scoring.</p>
+          <p><strong>Real-Time Fraud Detection</strong> — Designed Kafka event streaming pipelines with ML scoring models achieving sub-50ms latency and 28% improvement in fraud detection accuracy.</p>
+          <p><strong>CI/CD &amp; Infrastructure</strong> — Implemented Terraform-managed AWS infrastructure and GitHub Actions pipelines; reduced deployment times by 50% and manual intervention by 40%.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Sep 2021 – Aug 2023</div>
+        <div class="tl-title">Software Engineer</div>
+        <h4>Capgemini — Bangalore, India</h4>
+        <div class="tl-body">
+          <p><strong>Backend Engineering</strong> — Built scalable REST APIs and microservices in Java and Python. Reduced processing latency by 42% and improved system throughput for enterprise clients.</p>
+          <p><strong>CI/CD &amp; Deployment</strong> — Automated deployment pipelines with Jenkins and GitHub Actions, increasing release frequency by 3x. Implemented Docker and Kubernetes orchestration across production services.</p>
+          <p><strong>AI/ML Features</strong> — Integrated Hugging Face models and LangChain workflows into production analytics platform; improved analytics latency by 50%.</p>
+          <p><strong>Cloud Infrastructure</strong> — Designed AWS-based cloud architecture reducing infrastructure costs by 25%.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">May 2020 – Aug 2021</div>
+        <div class="tl-title">Software Engineer</div>
+        <h4>Accenture — Hyderabad, India</h4>
+        <div class="tl-body">
+          <p><strong>Portal Development</strong> — Built full-stack web application using React and Java Spring Boot driving 45% adoption increase in first quarter of launch.</p>
+          <p><strong>Claims Automation</strong> — Developed ML-assisted claims routing engine improving first-pass rate from 78% to 96%.</p>
+          <p><strong>Patient Experience</strong> — Implemented automated scheduling and notification system reducing no-shows by 22%.</p>
+          <p><strong>Quality Engineering</strong> — Established unit testing and integration testing practices reducing production bugs by 35%.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:#2d2d2d;padding:5rem 0">
+  <div class="inner">
+    <p style="font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#e44c65;margin-bottom:0.5rem">Get in Touch</p>
+    <h2 style="font-family:'Raleway',sans-serif;font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:2.5rem">Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h3>Where to find me</h3>
+        <p>St. Louis<br>Missouri<br>USA</p>
+      </div>
+      <div class="contact-block">
+        <h3>Email Me At</h3>
+        <a href="mailto:pavankalyanudugula@gmail.com">pavankalyanudugula@gmail.com</a>
+      </div>
+      <div class="contact-block">
+        <h3>Call Me At</h3>
+        <p>+1 (314) 282-3092</p>
+        <br>
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com/in/pavankalyanudugula" target="_blank">linkedin.com/in/pavankalyanudugula</a>
+      </div>
+    </div>
+    <div style="text-align:center;padding-top:2rem;margin-top:2rem;border-top:1px solid #444;font-size:0.8rem;color:#666">
+      &copy; 2025 Pavan Kalyan. All rights reserved.
+    </div>
+  </div>
+</section>
+
+<script>
+// Animate skill bars on scroll
+const bars = document.querySelectorAll('.skill-bar-fill');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.style.width = e.target.dataset.w + '%';
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:0.3});
+bars.forEach(b => io.observe(b));
+
+// Close menu on link click
+document.querySelectorAll('.nav-menu a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-menu').classList.remove('open'));
+});
+</script>
+</body>
+</html>
