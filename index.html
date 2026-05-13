@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pavan Kalyan – Software Engineer Portfolio</title>
 <meta property="og:title" content="Pavan Kalyan – Software Engineer">
-<meta property="og:description" content="5+ years in distributed systems, Java/Python backend, and AI/ML integration. Actively looking for SDE opportunities.">
+<meta property="og:description" content="5+ years in Java/Python backend, distributed systems, and AI/ML integration. Actively looking for SDE opportunities.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pavankalyanudugula6.github.io/Pavan_portfolio/">
 <meta property="og:image" content="https://pavankalyanudugula6.github.io/Pavan_portfolio/photo.jpg">
@@ -47,12 +47,17 @@ h3.block-title{font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;c
 .plist a:hover{text-decoration:underline}
 .open-badge{color:#27ae60;font-weight:600}
 .reloc-badge{color:#2980b9;font-weight:600}
-.skill-cat-label{font-family:'Raleway',sans-serif;font-weight:700;font-size:0.85rem;color:#555;margin:1rem 0 0.5rem}
+.skill-cat-label{font-family:'Raleway',sans-serif;font-weight:700;font-size:0.85rem;color:#555;margin:1rem 0 0.4rem}
 .sbar-row{margin-bottom:0.6rem}
 .sbar-top{display:flex;justify-content:space-between;font-size:0.8rem;font-weight:600;color:#555;margin-bottom:0.28rem}
 .sbar-bg{background:#ebebeb;border-radius:20px;height:7px;overflow:hidden}
 .sbar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,#e44c65,#9b59b6);width:0;transition:width 1.3s ease}
-.tag-line{font-size:0.84rem;color:#666;line-height:1.8}
+.tag-line{font-size:0.84rem;color:#666;line-height:1.85}
+#skills{padding:5rem 0}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.skill-card{background:#f9f9f9;border-radius:8px;padding:1.4rem 1.6rem;border-left:3px solid #e44c65}
+.skill-card h4{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#e44c65;margin-bottom:0.6rem}
+.skill-card p{font-size:0.86rem;color:#666;line-height:1.8}
 section{padding:5rem 0}
 section.alt{background:#f9f9f9}
 .sec-head{margin-bottom:2.2rem}
@@ -66,7 +71,8 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
 .tl-role{font-family:'Raleway',sans-serif;font-size:1.05rem;font-weight:700;color:#222;margin-bottom:0.1rem}
 .tl-org{font-size:0.88rem;color:#e44c65;font-weight:600;margin-bottom:0.6rem}
 .tl-body{font-size:0.88rem;color:#666;line-height:1.72}
-.tl-body p{margin-bottom:0.5rem}
+.tl-body p{margin-bottom:0.55rem}
+.tl-body p:last-child{margin-bottom:0}
 .tl-body strong{color:#555;font-weight:600}
 .proj-chip{display:inline-block;font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9b59b6;border:1px solid #ddd6f3;border-radius:3px;padding:0.12rem 0.45rem;margin-bottom:0.45rem}
 .metrics{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.8rem}
@@ -86,6 +92,7 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
   .hamburger{display:flex}
   .about-layout{flex-direction:column}
   .about-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
   .contact-row{grid-template-columns:1fr}
   h1.headline{font-size:2rem}
 }
@@ -100,8 +107,9 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
   </div>
   <ul class="nav-links">
     <li><a href="#aboutme">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#resume">Resume</a></li>
-    <li><a href="#projects">Technical Projects</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -114,13 +122,11 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
     <h1 class="headline">Let me introduce myself.</h1>
     <div class="about-layout">
       <div class="about-photo-col">
-        <div class="photo-circle">
-          <img src="photo.jpg" alt="Pavan Kalyan">
-        </div>
+        <div class="photo-circle"><img src="photo.jpg" alt="Pavan Kalyan"></div>
         <p class="photo-caption">St. Louis, Missouri, USA</p>
       </div>
       <div class="about-content">
-        <p class="about-intro">I am a Software Engineer with <strong>5+ years of experience</strong> building large-scale distributed systems, GenAI pipelines, and cloud-native applications across financial services and enterprise domains. I specialize in backend engineering with Java and Python, full-stack development with React/TypeScript, and AI/ML integration using LangChain, RAG pipelines, and LLM evaluation frameworks. Passionate about building systems that are reliable, scalable, and intelligent.</p>
+        <p class="about-intro">I am a Software Engineer with <strong>5+ years of experience</strong> delivering full-stack, cloud-native, and AI-powered solutions across financial services and enterprise domains. I specialize in Java, Python, and Spring Boot for building resilient microservices, designing and deploying AI/ML pipelines and GenAI workflows, and engineering real-time data streaming systems with Kafka. Experienced with REST API integration, microservices patterns, CI/CD automation, Docker, Kubernetes, Terraform, and AWS. Strong focus on secure API design, PCI DSS compliance, observability, and performance optimization in Agile environments.</p>
         <div class="about-grid">
           <div>
             <h3 class="block-title">Profile</h3>
@@ -135,18 +141,14 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
             </ul>
           </div>
           <div>
-            <h3 class="block-title">Skills</h3>
-            <p class="skill-cat-label">Languages</p>
-            <div class="sbar-row"><div class="sbar-top"><span>Java / Spring Boot</span><span>95%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="95"></div></div></div>
-            <div class="sbar-row"><div class="sbar-top"><span>Python / FastAPI</span><span>90%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="90"></div></div></div>
-            <div class="sbar-row"><div class="sbar-top"><span>TypeScript / React</span><span>85%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="85"></div></div></div>
-            <div class="sbar-row"><div class="sbar-top"><span>Go / C++</span><span>70%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="70"></div></div></div>
-            <p class="skill-cat-label">AI / ML</p>
-            <p class="tag-line">LangChain, LlamaIndex, OpenAI API, Anthropic API, RAG Pipelines, Hugging Face, RAGAS, DeepEvals, Vector Databases</p>
-            <p class="skill-cat-label">Cloud &amp; DevOps</p>
-            <p class="tag-line">AWS (EC2, EKS, Lambda, S3, RDS), Docker, Kubernetes, Terraform, GitHub Actions, Jenkins, Apache Kafka</p>
-            <p class="skill-cat-label">Databases</p>
-            <p class="tag-line">PostgreSQL, MySQL, MongoDB, DynamoDB, Redis, Elasticsearch</p>
+            <h3 class="block-title">Core Technologies</h3>
+            <p class="skill-cat-label">Languages &amp; Frameworks</p>
+            <div class="sbar-row"><div class="sbar-top"><span>Java / Spring Boot 3</span><span>95%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="95"></div></div></div>
+            <div class="sbar-row"><div class="sbar-top"><span>Python / FastAPI</span><span>95%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="95"></div></div></div>
+            <div class="sbar-row"><div class="sbar-top"><span>TypeScript / React.js</span><span>90%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="90"></div></div></div>
+            <div class="sbar-row"><div class="sbar-top"><span>Node.js / Go / C++</span><span>80%</span></div><div class="sbar-bg"><div class="sbar-fill" data-w="80"></div></div></div>
+            <p class="skill-cat-label">AI / ML &amp; GenAI</p>
+            <p class="tag-line">LangChain, LlamaIndex, OpenAI API, Anthropic API, RAG Pipelines, RAGAS, DeepEvals, Hugging Face, BERT, GPT Models, MLflow, SageMaker, Vector Databases</p>
           </div>
         </div>
       </div>
@@ -154,8 +156,58 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
   </div>
 </section>
 
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <p class="section-eyebrow">Technical Skills</p>
+    <div class="sec-head"><h2 class="sec-title">Skills</h2></div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Programming &amp; Frameworks</h4>
+        <p>Java, Python (FastAPI, Pandas, NumPy, Scikit-learn), Spring Boot 3, Spring MVC, Spring Cloud, Hibernate (JPA), Node.js (Express.js), RESTful APIs, GraphQL, Microservices, C, C++, C#, Go, .NET</p>
+      </div>
+      <div class="skill-card">
+        <h4>Frontend Development</h4>
+        <p>JavaScript, TypeScript, React.js, Next.js, Angular, HTML5, CSS3, Responsive Design, UI/UX Design</p>
+      </div>
+      <div class="skill-card">
+        <h4>Cloud &amp; DevOps</h4>
+        <p>AWS (Lambda, S3, EC2, API Gateway, Aurora PostgreSQL, EKS), Docker, Kubernetes, Terraform, Linux/Unix, CI/CD (Jenkins, GitHub Actions), Blue-Green &amp; Rolling Deployments, HPA, GitOps, Ansible, ArgoCD</p>
+      </div>
+      <div class="skill-card">
+        <h4>Databases &amp; Data Management</h4>
+        <p>PostgreSQL, MySQL, MongoDB, DynamoDB, Redis, Pinecone, Weaviate, ChromaDB, Elasticsearch, SQL Optimization, Indexing</p>
+      </div>
+      <div class="skill-card">
+        <h4>Messaging &amp; Streaming</h4>
+        <p>Apache Kafka, Event-Driven Architecture, Retry &amp; Dead-Letter Queues, Idempotent Consumers, gRPC</p>
+      </div>
+      <div class="skill-card">
+        <h4>Monitoring &amp; Observability</h4>
+        <p>Prometheus, Grafana, ELK Stack, OpenTelemetry, CloudWatch, Performance Tuning</p>
+      </div>
+      <div class="skill-card">
+        <h4>Security &amp; API Management</h4>
+        <p>OAuth2, JWT, Role-Based Access Control (RBAC), PCI DSS, Swagger / OpenAPI, Tokenization, Multi-Factor Authentication</p>
+      </div>
+      <div class="skill-card">
+        <h4>Testing &amp; Quality</h4>
+        <p>JUnit, Mockito, Cypress, Postman / Newman, Load Testing, Integration Testing, Code Coverage</p>
+      </div>
+      <div class="skill-card">
+        <h4>AI, ML &amp; LLMs</h4>
+        <p>Generative AI, RAG Pipelines, Vector Embeddings, LangChain, LlamaIndex, OpenAI API, Anthropic API, Hugging Face Transformers, BERT, GPT Models, Model Fine-Tuning, RAGAS, DeepEvals, SageMaker Monitoring, MLflow</p>
+      </div>
+      <div class="skill-card">
+        <h4>Collaboration &amp; Agile</h4>
+        <p>Scrum / Kanban, JIRA, Confluence, Cross-Functional Teamwork, Technical Design Reviews, Documentation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- RESUME -->
-<section id="resume">
+<section id="resume" class="alt">
   <div class="wrap">
     <p class="section-eyebrow">Resume</p>
     <div class="sec-head"><h2 class="sec-title">Education</h2></div>
@@ -172,7 +224,7 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
       </div>
     </div>
     <div class="sec-head"><h2 class="sec-title">Certifications</h2></div>
-    <div class="tl" style="margin-bottom:3rem">
+    <div class="tl">
       <div class="tl-item">
         <div class="tl-date">2025</div>
         <div class="tl-role">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</div>
@@ -188,7 +240,7 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="alt">
+<section id="projects">
   <div class="wrap">
     <p class="section-eyebrow">Technical Projects</p>
     <div class="sec-head"><h2 class="sec-title">Technical Projects</h2></div>
@@ -197,7 +249,8 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
         <div class="proj-chip">GenAI / RAG</div>
         <div class="tl-role">RAG Evaluation &amp; LLM Quality Framework</div>
         <div class="tl-org">USAA — Production System</div>
-        <div class="tl-body">Built an end-to-end RAG evaluation pipeline using RAGAS and DeepEvals to benchmark LLM output quality across 15+ metrics including groundedness, faithfulness, and answer relevancy. Integrated LangChain, OpenAI API, and Anthropic API with automated Grafana scoring dashboards. Reduced manual QA effort by 60% and improved model response quality scores by 35%.</div>
+        <div class="tl-body">Built an end-to-end RAG evaluation pipeline using RAGAS and DeepEvals to benchmark LLM output quality across 15+ metrics including groundedness, faithfulness, and answer relevancy. Integrated LangChain, LlamaIndex, OpenAI API, and Anthropic API with automated Grafana scoring dashboards. Reduced manual QA effort by 60% and improved model response quality scores by 35%.</div>
+        <div class="metrics"><span class="metric">↓60% Manual QA</span><span class="metric">↑35% Quality Scores</span></div>
       </div>
       <div class="tl-item">
         <div class="proj-chip">Real-Time / Kafka</div>
@@ -210,7 +263,7 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
         <div class="proj-chip">Microservices / AWS</div>
         <div class="tl-role">Cloud-Native Payment Processing Platform</div>
         <div class="tl-org">USAA — Production System</div>
-        <div class="tl-body">Architected a multi-service payment processing system on AWS EKS with Java Spring Boot 3 microservices. Implemented OAuth2, JWT, and RBAC security layers fully compliant with PCI DSS standards. System handles 30,000+ concurrent users at 99.99% uptime with 35% API latency reduction through Redis caching and async processing.</div>
+        <div class="tl-body">Architected a multi-service payment processing system on AWS EKS with Java Spring Boot 3 microservices and tokenization systems. Implemented OAuth2, JWT, RBAC, and MFA security layers fully compliant with PCI DSS standards. System handles 30,000+ concurrent users at 99.99% uptime with 35% API latency reduction through Redis caching and async processing.</div>
         <div class="metrics"><span class="metric">99.99% Uptime</span><span class="metric">↓35% API Latency</span><span class="metric">PCI DSS Compliant</span></div>
       </div>
       <div class="tl-item">
@@ -222,17 +275,17 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
       </div>
       <div class="tl-item">
         <div class="proj-chip">Healthcare / ML</div>
-        <div class="tl-role">Automated Insurance Claims Validation System</div>
+        <div class="tl-role">Automated Insurance Claims &amp; EHR Integration</div>
         <div class="tl-org">Accenture — Production System</div>
-        <div class="tl-body">Developed ML-assisted claim routing and automated validation engine using Python and Java Spring Boot. Integrated predictive models for claim categorization and real-time eligibility checks. Improved insurance claim first-pass rate from 78% to 96%, and reduced patient no-shows by 22% through intelligent scheduling notifications.</div>
-        <div class="metrics"><span class="metric">78%→96% First-Pass</span><span class="metric">↓22% No-Shows</span><span class="metric">↓35% Bugs</span></div>
+        <div class="tl-body">Developed ML-assisted claim routing and automated validation engine using Python and Java Spring Boot with HL7/FHIR-compliant APIs for EHR integration, eliminating 100% of manual data entry errors. Improved first-pass claim acceptance from 78% to 96% and reduced patient no-shows by 22% through Node.js + AWS Lambda automated reminder workflows.</div>
+        <div class="metrics"><span class="metric">78%→96% First-Pass</span><span class="metric">↓22% No-Shows</span><span class="metric">↓100% Manual Entry</span><span class="metric">↓35% Bugs</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section id="experience" class="alt">
   <div class="wrap">
     <p class="section-eyebrow">Career</p>
     <div class="sec-head"><h2 class="sec-title">Work Experience</h2></div>
@@ -242,34 +295,35 @@ h2.sec-title{font-family:'Raleway',sans-serif;font-size:1.85rem;font-weight:800;
         <div class="tl-role">Software Engineer</div>
         <div class="tl-org">USAA — United States (Remote)</div>
         <div class="tl-body">
-          <p><strong>Distributed Systems &amp; APIs</strong> — Architected Java/Spring Boot 3 microservices on AWS EKS serving 30,000+ concurrent financial services users at 99.99% uptime. Designed RESTful and gRPC APIs with OAuth2/JWT/RBAC and PCI DSS compliance. Reduced API latency by 35% through Redis caching, async processing, and query optimization.</p>
-          <p><strong>GenAI &amp; LLM Integration</strong> — Built production RAG pipelines with LangChain, LlamaIndex, OpenAI API, and Anthropic API. Developed LLM evaluation frameworks using RAGAS and DeepEvals with 15+ automated quality metrics. Deployed AI-powered fraud detection features improving detection accuracy by 28%.</p>
-          <p><strong>Real-Time Event Streaming</strong> — Designed Apache Kafka event streaming pipelines for real-time fraud signal processing with sub-50ms latency SLAs. Implemented DLQ handling, consumer group management, and partition optimization.</p>
-          <p><strong>Infrastructure &amp; DevOps</strong> — Managed AWS infrastructure via Terraform; built GitHub Actions CI/CD pipelines with blue-green deployments reducing deployment time by 50%. Implemented Prometheus/Grafana/ELK observability stack achieving 40% reduction in MTTR.</p>
+          <p><strong>Payment APIs &amp; Security</strong> — Engineered AI-driven payment APIs and tokenization systems using Spring Boot 3, Hibernate, Python, and RESTful microservices, enabling secure agentic transactions. Optimized API response times by 35%, supporting 30,000+ concurrent AI-initiated payments daily at 99.99% uptime with OAuth2, JWT, RBAC, MFA, and full PCI DSS compliance.</p>
+          <p><strong>GenAI &amp; LLM Integration</strong> — Built production RAG pipelines with LangChain, LlamaIndex, OpenAI API, and Anthropic API. Developed LLM evaluation frameworks using RAGAS and DeepEvals with 15+ automated quality metrics. Integrated Generative AI models to autonomously verify transaction intent and reconcile contextual merchant data, improving fraud detection accuracy by 28%.</p>
+          <p><strong>Real-Time Streaming &amp; Caching</strong> — Designed Apache Kafka event streaming pipelines with sub-50ms latency SLAs, DLQ handling, and partition optimization. Implemented MongoDB and Redis caching for real-time transaction data and AI context retrieval, decreasing database latency by 40% and enabling instant AI-driven decision-making.</p>
+          <p><strong>Infrastructure, Observability &amp; Collaboration</strong> — Deployed IaC pipelines via Terraform on AWS; built GitHub Actions CI/CD with blue-green deployments reducing deploy times by 50%. Built Prometheus, Grafana, ELK, SageMaker, and MLflow monitoring achieving 22% reduction in failed transactions via predictive anomaly detection. Collaborated with Microsoft and IBM teams to standardize GenAI workflows and PCI DSS-compliant data contracts.</p>
         </div>
-        <div class="metrics"><span class="metric">↓50% Deploy Time</span><span class="metric">↑28% Fraud Detection</span><span class="metric">↓35% API Latency</span><span class="metric">99.99% Uptime</span></div>
+        <div class="metrics"><span class="metric">↓50% Deploy Time</span><span class="metric">↑28% Fraud Detection</span><span class="metric">↓35% API Latency</span><span class="metric">↓40% DB Latency</span><span class="metric">99.99% Uptime</span></div>
       </div>
       <div class="tl-item">
         <div class="tl-date">Sep 2021 – Aug 2023</div>
         <div class="tl-role">Software Engineer</div>
         <div class="tl-org">Capgemini — Bangalore, India</div>
         <div class="tl-body">
-          <p><strong>Backend Engineering</strong> — Built scalable REST APIs and Java/Python microservices for enterprise clients. Reduced processing latency by 42% through architectural improvements and database indexing strategies. Implemented event-driven patterns with Kafka improving system throughput by 3x.</p>
-          <p><strong>CI/CD &amp; Cloud</strong> — Automated deployment pipelines with Jenkins and GitHub Actions; increased release frequency 3x. Architected Docker/Kubernetes container orchestration on AWS reducing infrastructure costs by 25%.</p>
-          <p><strong>AI/ML Integration</strong> — Integrated Hugging Face models and LangChain-based workflows into production analytics platform. Improved analytics processing latency by 50% and reduced production defect rate by 40%.</p>
+          <p><strong>Microservices &amp; Backend</strong> — Architected microservices for retail order processing using Java, Spring Boot, Spring Cloud, REST APIs, and Python automation, enabling real-time order validation and reducing processing latency by 42%. Containerized pipelines with Docker, Kubernetes, and Helm on AWS achieving 99.98% uptime and automated dynamic scaling during peak hours.</p>
+          <p><strong>Data Pipelines &amp; ETL</strong> — Automated real-time Kafka event streaming for inventory and pricing updates across 120+ stores, reducing mismatch errors by 35%. Configured ETL pipelines migrating from MySQL to PostgreSQL with MongoDB integration, improving analytics latency by 50% and accelerating BI reporting. Integrated AWS serverless workflows (Lambda, S3, RDS) reducing infrastructure costs by 25%.</p>
+          <p><strong>Full-Stack &amp; Dashboards</strong> — Developed full-stack workflows using Spring Boot + React, delivering order management portals with REST API integration. Orchestrated React + TypeScript dashboards visualizing KPIs, inventory alerts, and predictive insights for retail managers, increasing actionable insights adoption by 30%.</p>
+          <p><strong>Automation &amp; CI/CD</strong> — Developed Python automation scripts reducing manual processing time by 60%. Collaborated on CI/CD pipelines with Jenkins and GitHub Actions, increasing deployment frequency by 3x and reducing production bugs by 40% consistently.</p>
         </div>
-        <div class="metrics"><span class="metric">↓42% Latency</span><span class="metric">3x Deploy Freq</span><span class="metric">↓25% Infra Cost</span><span class="metric">↓40% Bugs</span></div>
+        <div class="metrics"><span class="metric">↓42% Latency</span><span class="metric">3x Deploy Freq</span><span class="metric">↓25% Infra Cost</span><span class="metric">↓60% Manual Time</span><span class="metric">↓40% Bugs</span></div>
       </div>
       <div class="tl-item">
         <div class="tl-date">May 2020 – Aug 2021</div>
         <div class="tl-role">Software Engineer</div>
         <div class="tl-org">Accenture — Hyderabad, India</div>
         <div class="tl-body">
-          <p><strong>Full-Stack Development</strong> — Built React/Angular frontend and Java Spring Boot backend for a healthcare portal, driving 45% adoption increase in Q1. Integrated real-time scheduling APIs and automated notification workflows.</p>
-          <p><strong>ML-Assisted Claims Processing</strong> — Developed automated claim routing and validation engine using Python. Improved first-pass claim approval rate from 78% to 96% and reduced patient no-shows by 22% through predictive scheduling.</p>
-          <p><strong>Quality Engineering</strong> — Established unit and integration testing standards with JUnit and Mockito. Reduced production bug rate by 35% and improved code coverage from 45% to 85%.</p>
+          <p><strong>Healthcare Portal &amp; EHR Integration</strong> — Built a secure mobile-optimized patient portal using React, Java Spring Boot, and REST APIs, boosting portal adoption by 45% in Q1. Integrated Electronic Health Records (EHR) with external diagnostic labs via HL7 and FHIR-compliant APIs, ensuring real-time data synchronization and eliminating 100% of manual data entry errors.</p>
+          <p><strong>Claims Processing &amp; Care Dashboard</strong> — Optimized medical claims processing by integrating insurance provider APIs, increasing first-pass claim acceptance from 78% to 96%. Revamped the care management dashboard using React with real-time monitoring of vitals and medication adherence for 4,000+ active patients.</p>
+          <p><strong>Automation &amp; ML Pipelines</strong> — Built automated appointment reminder workflows with Node.js and Python deployed on AWS Lambda, S3, and RDS, reducing patient no-shows by 22%. Implemented MLflow and SageMaker monitoring pipelines for versioning and deploying predictive patient risk scoring models, reducing manual errors. Reduced production bugs by 35% with JUnit, Mockito, Cypress, and Postman/Newman test suites.</p>
         </div>
-        <div class="metrics"><span class="metric">↑45% Adoption</span><span class="metric">78%→96% Claims</span><span class="metric">↓22% No-Shows</span><span class="metric">↓35% Bugs</span></div>
+        <div class="metrics"><span class="metric">↑45% Adoption</span><span class="metric">78%→96% Claims</span><span class="metric">↓22% No-Shows</span><span class="metric">↓100% Manual Entry</span><span class="metric">↓35% Bugs</span></div>
       </div>
     </div>
   </div>
